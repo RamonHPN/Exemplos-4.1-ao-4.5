@@ -1,0 +1,37 @@
+def endereço(E):
+    N = 2 ** E
+    return N
+
+def total_Capacidade(N, M):
+    T = M * N
+    return T
+
+def total_Celulas_Sem_N(T, M):
+    N = T/M
+    return N
+
+import math
+def bits_endereço(N):
+    E = math.log( N, 2)
+    return E
+    
+    
+b = input(print(" Digite:\n 1 - Pra saber o numero de celulas\n 2 - Pra saber a capacidade total\n 3 - Total de celulas sem o endereço\n 4 - bits do endereço "))
+ 
+if b == '1':    
+    e = int(input('Digite o tamanho do endereço: '))
+    print(endereço(e))
+
+elif b == '2':
+    n = int(input('Digite o numero de celulas: '))
+    m = int(input('Digite o tamnho da celula: '))
+    print(total_Capacidade(n, m))
+
+elif b == '3':
+    t = int(input('Digite a capcidade total: '))
+    m = int(input('Digite o tamnho ou número de celulas: '))
+    print(total_Celulas_Sem_N(t, m))
+
+elif b == '4':
+    n = int(input('Digite o numero de celulas: '))
+    print(bits_endereço(n))  
